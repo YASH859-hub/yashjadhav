@@ -1,0 +1,8 @@
+{
+  "name": "Yash Jadhav Portfolio",
+  "description": "Portfolio of Yash Jadhav, AI/ML Engineer, Researcher, and Builder.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

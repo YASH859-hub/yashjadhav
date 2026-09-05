@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Kanit", sans-serif;
+  
+  --color-background: #0C0C0C;
+  --color-foreground: #FFFFFF;
+  
+  --color-silver-light: #BBCCD7;
+  --color-silver-dark: #646973;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    cursor: none;
+    overflow-x: hidden;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    background: linear-gradient(180deg, var(--color-silver-dark) 0%, var(--color-silver-light) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+  }
+  
+  .border-gradient {
+    border: 2px solid transparent;
+    background-image: linear-gradient(var(--color-background), var(--color-background)), linear-gradient(180deg, var(--color-silver-dark) 0%, var(--color-silver-light) 100%);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+  }
+}
+
+/* Hide default cursor only on devices that support hover */
+@media (hover: none) and (pointer: coarse) {
+  body {
+    cursor: auto;
+  }
+}
+
+::selection {
+  background-color: var(--color-silver-light);
+  color: var(--color-background);
+}
