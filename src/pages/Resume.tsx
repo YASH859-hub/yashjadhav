@@ -17,9 +17,15 @@ export default function Resume() {
               {profile.roles.join(" • ")}
             </p>
           </div>
-          <button className="px-8 py-3 rounded-full border-gradient font-light uppercase tracking-widest text-sm hover:bg-white/5 transition-colors">
+          <a
+            href="/assets/Yash-Jadhav-Resume.pdf"
+            download="Yash-Jadhav-Resume.pdf"
+            target="_blank"
+            rel="noreferrer"
+            className="px-8 py-3 rounded-full border-gradient font-light uppercase tracking-widest text-sm hover:bg-white/5 transition-colors"
+          >
             Download Resume
-          </button>
+          </a>
         </div>
 
         <div className="flex flex-col gap-24">
