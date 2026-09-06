@@ -14,7 +14,7 @@ function CharacterReveal({ text, progress }: { text: string, progress: MotionVal
         
         return (
           <motion.span key={i} style={{ opacity }}>
-            {char === " " ? "\u00A0" : char}
+            {char}
           </motion.span>
         );
       })}
@@ -76,7 +76,7 @@ export default function About() {
         whileInView={{ opacity: 1, x: 0, y: 0 }}
         transition={{ duration: 0.8, delay: 0.2 }}
         viewport={{ once: true, margin: "-100px" }}
-        className="absolute top-10 left-10 md:top-24 md:left-24"
+        className="hidden md:block absolute top-24 left-24"
       >
         <MathVisual />
       </motion.div>
@@ -86,7 +86,7 @@ export default function About() {
         whileInView={{ opacity: 1, x: 0, y: 0 }}
         transition={{ duration: 0.8, delay: 0.4 }}
         viewport={{ once: true, margin: "-100px" }}
-        className="absolute bottom-10 left-10 md:bottom-24 md:left-24"
+        className="hidden md:block absolute bottom-24 left-24"
       >
         <TerminalVisual />
       </motion.div>
@@ -96,7 +96,7 @@ export default function About() {
         whileInView={{ opacity: 1, x: 0, y: 0 }}
         transition={{ duration: 0.8, delay: 0.3 }}
         viewport={{ once: true, margin: "-100px" }}
-        className="absolute top-10 right-10 md:top-24 md:right-24"
+        className="hidden md:block absolute top-24 right-24"
       >
         <NeuralVisual />
       </motion.div>
@@ -106,7 +106,7 @@ export default function About() {
         whileInView={{ opacity: 1, x: 0, y: 0 }}
         transition={{ duration: 0.8, delay: 0.5 }}
         viewport={{ once: true, margin: "-100px" }}
-        className="absolute bottom-10 right-10 md:bottom-24 md:right-24"
+        className="hidden md:block absolute bottom-24 right-24"
       >
         <GraphVisual />
       </motion.div>

@@ -6,7 +6,7 @@ import { useRef } from 'react';
 // Abstract Engineering Visual Component
 function ComputationalSystem() {
   return (
-    <div className="relative w-full h-[60vh] max-h-[600px] flex items-center justify-center pointer-events-none opacity-20">
+    <div className="relative w-full h-[48vh] max-h-[600px] flex items-center justify-center pointer-events-none opacity-20 md:h-[60vh]">
       <svg className="w-full h-full max-w-3xl opacity-80" viewBox="0 0 1000 600" fill="none" xmlns="http://www.w3.org/2000/svg">
         <motion.g 
           initial={{ opacity: 0, scale: 0.9 }}
@@ -93,15 +93,15 @@ export default function Hero() {
   const opacity = useTransform(scrollY, [0, 500], [1, 0]);
 
   return (
-    <section ref={containerRef} className="relative w-full h-screen min-h-[800px] flex flex-col justify-between pt-32 pb-8 px-6 md:px-12 overflow-hidden">
+    <section ref={containerRef} className="relative w-full h-[100svh] min-h-[680px] flex flex-col justify-between pt-28 pb-6 px-6 md:h-screen md:min-h-[800px] md:pt-32 md:pb-8 md:px-12 overflow-hidden">
       
       {/* Background Visual */}
       <motion.div style={{ y, opacity }} className="absolute inset-0 flex items-center justify-center pointer-events-none z-0">
         <ComputationalSystem />
-        <div className='absolute top-20 left-10 md:top-32 md:left-20 opacity-30 text-[9px] font-mono tracking-tighter text-left text-[#888]'>
+        <div className='hidden md:block absolute top-32 left-20 opacity-30 text-[9px] font-mono tracking-tighter text-left text-[#888]'>
           [SYSTEM_INIT] <br/> LAYER_01: INPUT_TENSOR <br/> LAYER_02: TRANSFORMER_BLK <br/> STATUS: OPTIMIZING_WEIGHTS
         </div>
-        <div className='absolute bottom-40 right-10 md:bottom-52 md:right-20 opacity-30 text-[9px] font-mono tracking-tighter text-right text-[#888]'>
+        <div className='hidden md:block absolute bottom-52 right-20 opacity-30 text-[9px] font-mono tracking-tighter text-right text-[#888]'>
           LOSS: 0.0024 <br/> EPOCH: 844/1000 <br/> LR: 1e-4 <br/> MASKED_LANGUAGE_MODELING
         </div>
       </motion.div>
@@ -112,7 +112,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 50, filter: 'blur(10px)' }}
           animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
           transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-          className="text-[12vw] md:text-[140px] leading-[0.85] font-black tracking-tighter uppercase text-gradient mb-6"
+          className="text-[15vw] md:text-[140px] leading-[0.85] font-black tracking-tighter uppercase text-gradient mb-6"
         >
           {profile.heroText}
         </motion.h1>
@@ -120,7 +120,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.4, ease: "easeOut" }}
-          className="max-w-xl text-[#888] text-sm uppercase tracking-[0.3em] font-medium leading-relaxed"
+          className="max-w-[19rem] md:max-w-xl text-[#888] text-[11px] md:text-sm uppercase tracking-[0.22em] md:tracking-[0.3em] font-medium leading-relaxed"
         >
           {profile.heroSubtext}
         </motion.p>
