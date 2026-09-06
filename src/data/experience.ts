@@ -2,7 +2,7 @@ export const experience = [
   {
     role: "MACHINE LEARNING INTERN",
     company: "FlyRank AI",
-    date: "Jul 2026 — Present"
+    date: "Jul 2026 — Sept 2026"
   },
   {
     role: "ARTIFICIAL INTELLIGENCE INTERN",
